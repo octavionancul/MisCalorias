@@ -54,7 +54,6 @@ public class TMBFragment extends Fragment {
 
                   if (selectedId == -1) {
                     Toast.makeText(getContext(), "Seleccione genero", Toast.LENGTH_SHORT).show();
-                    Log.d("dd", String.valueOf(selectedId));
 
                 } else {
                     RadioButton radioButton1 = radioGroup.findViewById(selectedId);

@@ -11,5 +11,5 @@
     <string name="weightEt">Peso</string>
     <string name="weightTv">KGS</string>
     <string name="heightTv">CMS</string>
-    <string name="calculateBtn">Calculate</string>
+    <string name="calculateBtn">Calcular</string>
 </resources>
