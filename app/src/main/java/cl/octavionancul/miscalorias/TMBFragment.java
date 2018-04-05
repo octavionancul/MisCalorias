@@ -23,11 +23,9 @@ import static android.text.TextUtils.isEmpty;
  */
 public class TMBFragment extends Fragment {
 
-
     public TMBFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,8 +76,6 @@ public class TMBFragment extends Fragment {
                         intent.putExtra("tmb",String.valueOf(tmb));
                         intent.putExtra("myCalories",String.valueOf(myCalories));
                         startActivity(intent);
-
-
 
                     }
                 }

@@ -14,14 +14,11 @@ public class ResultActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String value = extras.getString("tmb");
-          String value2 = extras.getString("myCalories");
+            String value2 = extras.getString("myCalories");
 
            TextView tv = findViewById(R.id.resultTv);
             tv.setText("Metabolismo basal: "+ value+" calorias al dia. \n\nCalorias necesarias para mantener el peso (sedentarios): "+value2+" calorias por dia.");
-            Log.d("dd", getIntent().getStringExtra("tmb"));
-            Log.d("dd", value);
 
-            //The key argument here must match that used in the other activity
         }
 
     }
