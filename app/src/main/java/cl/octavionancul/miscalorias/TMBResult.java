@@ -19,7 +19,7 @@ public class TMBResult extends TMBAnswer {
         String gender = getGender();
 
         if(gender.equals("Hombre")){
-        //    Log.d("dd", String.valueOf(((10*weight)+(6.25*height)-(5*age)+5)));
+
             return (int) ((10*weight)+(6.25*height)-(5*age)+5);
         }else{
             return (int) ((10*weight)+(6.25*height)-(5*age)-161);

@@ -17,7 +17,7 @@ public class ResultActivity extends AppCompatActivity {
           String value2 = extras.getString("myCalories");
 
            TextView tv = findViewById(R.id.resultTv);
-            tv.setText("Metabolismo basal: "+ value+" calorias al dia. \n Calorias necesarias para mantener el peso (sedentarios) : "+value2+" calorias por dia.");
+            tv.setText("Metabolismo basal: "+ value+" calorias al dia. \n\nCalorias necesarias para mantener el peso (sedentarios): "+value2+" calorias por dia.");
             Log.d("dd", getIntent().getStringExtra("tmb"));
             Log.d("dd", value);
 

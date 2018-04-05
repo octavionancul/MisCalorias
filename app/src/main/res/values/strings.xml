@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Calcula la cantidad minimima de calorias que necesitas al dia.</string>
+    <string name="maleRb">Hombre</string>
+    <string name="femaleRb">Mujer</string>
+    <string name="ageEt">Edad</string>
+    <string name="heightEt">Altura</string>
+    <string name="weightEt">Peso</string>
+    <string name="weightTv">KGS</string>
+    <string name="heightTv">CMS</string>
+    <string name="calculateBtn">Calculate</string>
 </resources>

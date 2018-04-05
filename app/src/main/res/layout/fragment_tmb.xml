@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context="cl.octavionancul.miscalorias.TMBFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
 
     <RadioGroup
         android:id="@+id/genderRg"
@@ -18,75 +18,76 @@
             android:id="@+id/maleRb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hombre" />
+            android:text="@string/maleRb" />
 
         <RadioButton
             android:id="@+id/femaleRb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mujer" />
+            android:text="@string/femaleRb" />
 
     </RadioGroup>
+
     <EditText
 
         android:id="@+id/ageEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Edad"
+        android:hint="@string/ageEt"
         android:inputType="number"
         android:maxLength="3" />
-<LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/heightEt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Altura"
-        android:inputType="number"
-        android:maxLength="3" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:text="CMS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/heightEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/heightEt"
+            android:inputType="number"
+            android:maxLength="3" />
 
-
-</LinearLayout>
-
-   <LinearLayout
-       android:orientation="horizontal"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-
-       <EditText
-           android:id="@+id/weightEt"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:ems="10"
-           android:hint="Peso"
-           android:inputType="number"
-           android:maxLength="3" />
-
-       <TextView
-           android:text="KGS"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heightTv" />
 
 
-   </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/weightEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/weightEt"
+            android:inputType="number"
+            android:maxLength="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weightTv" />
+
+    </LinearLayout>
 
     <Button
-        android:background="@color/colorAccent"
         android:id="@+id/calculateBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular" />
-
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:text="@string/calculateBtn"
+        />
 
 </LinearLayout>

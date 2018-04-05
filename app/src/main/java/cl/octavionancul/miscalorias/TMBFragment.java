@@ -40,20 +40,19 @@ public class TMBFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button calculate = view.findViewById(R.id.calculateBtn);
+        final Button calculate = view.findViewById(R.id.calculateBtn);
         final RadioGroup radioGroup = view.findViewById(R.id.genderRg);
         final EditText ageEt = view.findViewById(R.id.ageEt);
         final EditText heightEt = view.findViewById(R.id.heightEt);
         final EditText weightEt = view.findViewById(R.id.weightEt);
 
+            calculate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                  int selectedId = radioGroup.getCheckedRadioButtonId();
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
-
-                if (selectedId == -1) {
+                  if (selectedId == -1) {
                     Toast.makeText(getContext(), "Seleccione genero", Toast.LENGTH_SHORT).show();
                     Log.d("dd", String.valueOf(selectedId));
 
@@ -62,13 +61,13 @@ public class TMBFragment extends Fragment {
                     String gender = radioButton1.getText().toString();
                     if (isEmpty(ageEt.getText().toString())) {
                         ageEt.setError("Ingrese edad");
-                       // Toast.makeText(getContext(), "Ingrese edad", Toast.LENGTH_SHORT).show();
+
                     } else if (isEmpty(heightEt.getText().toString())) {
                         heightEt.setError("Ingrese altura");
-                      // Toast.makeText(getContext(), "Ingrese altura", Toast.LENGTH_SHORT).show();
+
                     } else if (isEmpty(weightEt.getText().toString())) {
                         weightEt.setError("Ingrese peso");
-                        // Toast.makeText(getContext(), "Ingrese altura", Toast.LENGTH_SHORT).show();
+
                     }else{
                         int age = Integer.parseInt(ageEt.getText().toString());
                         int height = Integer.parseInt(heightEt.getText().toString());
@@ -77,12 +76,12 @@ public class TMBFragment extends Fragment {
                         int tmb = new TMBResult(age, weight, height, gender).getTMB();
                         int myCalories = (int) (tmb *1.2);
                         Intent intent = new Intent(getActivity(),ResultActivity.class);
-
                         intent.putExtra("tmb",String.valueOf(tmb));
                         intent.putExtra("myCalories",String.valueOf(myCalories));
                         startActivity(intent);
 
-                        Log.d("dd", gender + "- " + String.valueOf(age));
+
+
                     }
                 }
 
